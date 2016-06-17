@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CURDGrid", "CURDGrid.csproj", "{90DCF7E4-1073-49A0-9167-99995FB74915}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestData", "..\TestData\TestData.csproj", "{3F2EE5AC-0CEE-4F40-9083-299BFE1DA3C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90DCF7E4-1073-49A0-9167-99995FB74915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90DCF7E4-1073-49A0-9167-99995FB74915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90DCF7E4-1073-49A0-9167-99995FB74915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90DCF7E4-1073-49A0-9167-99995FB74915}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F2EE5AC-0CEE-4F40-9083-299BFE1DA3C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F2EE5AC-0CEE-4F40-9083-299BFE1DA3C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F2EE5AC-0CEE-4F40-9083-299BFE1DA3C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F2EE5AC-0CEE-4F40-9083-299BFE1DA3C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
