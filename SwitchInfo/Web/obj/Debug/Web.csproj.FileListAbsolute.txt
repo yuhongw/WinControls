@@ -1,6 +1,0 @@
-E:\projs\cnsoft\SwitchInfo\Web\bin\Web.dll.config
-E:\projs\cnsoft\SwitchInfo\Web\bin\Web.dll
-E:\projs\cnsoft\SwitchInfo\Web\bin\Web.pdb
-E:\projs\cnsoft\SwitchInfo\Web\obj\Debug\Web.csprojResolveAssemblyReference.cache
-E:\projs\cnsoft\SwitchInfo\Web\obj\Debug\Web.dll
-E:\projs\cnsoft\SwitchInfo\Web\obj\Debug\Web.pdb
