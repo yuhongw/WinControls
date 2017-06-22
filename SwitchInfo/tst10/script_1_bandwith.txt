@@ -1,0 +1,11 @@
+222.168.94.36
+WAIT "Username:"
+SEND "huawei\m"
+WAIT "Password:"
+SEND "Huawei@123\m"
+WAIT "Change now? [Y/N]:"
+SEND "N\m"
+WAIT "<xiaoyuan-ME60.MAN>"
+SEND "disp interface Eth-Trunk0\m"
+WAIT "More ----"
+SEND "\0x03"

@@ -1,0 +1,6 @@
+E:\projs\cnsoft\SwitchInfo\SwitchInfo\bin\Debug\SwitchInfo.exe
+E:\projs\cnsoft\SwitchInfo\SwitchInfo\bin\Debug\SwitchInfo.pdb
+E:\projs\cnsoft\SwitchInfo\SwitchInfo\obj\Debug\SwitchInfo.csprojResolveAssemblyReference.cache
+E:\projs\cnsoft\SwitchInfo\SwitchInfo\obj\Debug\SwitchInfo.exe
+E:\projs\cnsoft\SwitchInfo\SwitchInfo\obj\Debug\SwitchInfo.pdb
+E:\projs\cnsoft\SwitchInfo\SwitchInfo\bin\Debug\SwitchInfo.exe.config

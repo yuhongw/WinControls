@@ -1,0 +1,45 @@
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:huawei
+huawei
+Password:Huawei@123
+
+Warning: Please change the original password. A password must be at least 8 characters and consist of upper-case letters, lower-case letters, digits, and special characters.
+The password needs to be changed. Change now? [Y/N]:N
+N
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 2.
+      The current login time is 2017-06-17 09:56:53+08:00.
+Info: Latest accessed  IP: 36.102.227.164  Time: 2017-06-17 09:56:42+08:00  Failed: 0
+
+<xiaoyuan-ME60.MAN>disp interface Eth-Trunk0
+disp interface Eth-Trunk0
+Eth-Trunk0 current state : UP
+Line protocol current state : DOWN
+Link quality grade : GOOD
+Description:to xiaoyuan-renzheng-FRL-ME60 Eth-Trunk10
+Route Port,Hash arithmetic : According to flow,Maximal BW: 20G, Current BW: 20G, The Maximum Transmit Unit is 1500
+Internet protocol processing : disabled
+IP Sending Frames' Format is PKTFMT_ETHNT_2, Hardware address is cccc-81c0-b31a
+Physical is ETH_TRUNK
+Current system time: 2017-06-17 09:56:53+08:00
+    Last 300 seconds input rate 4790227536 bits/sec, 636307 packets/sec
+    Last 300 seconds output rate 1889451120 bits/sec, 540839 packets/sec
+    Realtime 14 seconds input rate 4929910456 bits/sec, 652855 packets/sec
+    Realtime 14 seconds output rate 1925194640 bits/sec, 556716 packets/sec
+    Input: 10865932856447 packets,9967210209277517 bytes
+           10865683702166 unicast,249148519 broadcast,5762 multicast
+           0 errors,0 drops
+    Output:9344835481177 packets,4183828841218045 bytes
+           9344834863879 unicast,617298 broadcast,0 multicast
+           0 errors,0 drops
+    Input bandwidth utilization  :   24%
+    Output bandwidth utilization : 9.88%
+-----------------------------------------------------
+PortName                      Status      Weight
+-----------------------------------------------------
+  ---- More ----\0x03
