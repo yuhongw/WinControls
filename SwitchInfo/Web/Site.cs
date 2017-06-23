@@ -7,27 +7,40 @@ using System.Xml.Serialization;
 
 namespace Web
 {
+    public class KV
+    {
+        public string Key { get; set; }
+        public string Value { get; set; }
+    }
+
     public class Site
     {
         public int Num { get; set; }
         public string Name { get; set; }
         public int X { get; set; }
         public int Y { get; set; }
-        public List<KeyValuePair<string,string>> Values { get; set; }
+        public List<KV> Values { get; set; }
     }
+
+
 
     public class SiteSvc
     {
-        public static List<Site> ReadData()
+        private string RootPath;
+        public SiteSvc(string path)
         {
-            string fn = HttpContext.Current.Server.MapPath("~/Data/sites.xml");
+            RootPath = path;
+        }
+        public  List<Site> ReadData()
+        {
+            string fn = $"{RootPath}/sites.xml";
             XmlSerializer ser = new XmlSerializer(typeof(List<Site>));
             return ser.Deserialize(System.IO.File.OpenRead(fn)) as List<Site>;
         }
 
-        public static void SaveData(List<Site> list)
+        public  void SaveData(List<Site> list)
         {
-            string fn = HttpContext.Current.Server.MapPath("~/Data/sites.xml");
+            string fn = $"{RootPath}/sites.xml";
             XmlSerializer ser = new XmlSerializer(typeof(List<Site>));
             if (File.Exists(fn)) File.Delete(fn);
             using (Stream fs = File.OpenWrite(fn))
@@ -36,21 +49,18 @@ namespace Web
             }
         }
 
-        public static List<Site> GetSample()
+        public List<Site> GetSample()
         {
-            return new List<Site> {
-                    new Site{  Num=1 , Name="农安", X=100, Y=100 
-                    , Values= new List<KeyValuePair<string, string>>
-                    {
-                        new KeyValuePair<string, string>("输入带宽","10%"),
-                        new KeyValuePair<string, string>("输出带宽","20%"),
-                        new KeyValuePair<string, string>("在线用户","12345"),
-                        new KeyValuePair<string, string>("在线用户","12345"),
-                        new KeyValuePair<string, string>("在线用户","12345"),
-                        new KeyValuePair<string, string>("在线用户","12345")
-                    }
-                    }
-            };
+            List<Site> site = new List<Site>()
+            {
+            new Site { Num = 1, Name = "农安", X = 100, Y = 100, Values = new List<KV>{
+                new KV{ Key="输入带宽",Value="10%"},
+                new KV{ Key="在线用户",Value="12345"},
+                new KV{ Key="访问用户SL2",Value="12"},
+                new KV{ Key="访问用户SL3",Value="123"},
+                new KV{ Key="访问用户SL4",Value="1234"}
+            }}};
+            return site;
         }
     }
 }

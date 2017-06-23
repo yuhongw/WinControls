@@ -10,6 +10,12 @@ namespace SwitchInfo
 {
     public class SwitchReader
     {
+        private string RootPath;
+
+        public SwitchReader(string rootPath)
+        {
+            this.RootPath = RootPath;
+        }
 
         public string Get1_BandWithInputValue()
         {
@@ -125,13 +131,12 @@ namespace SwitchInfo
         public List<string> GetInfoByParams(string scriptFile, string outFile, string[] dests, bool fromCache)
         {
             List<string> result = new List<string>();
-            string rootPath = Path.GetDirectoryName(Properties.Settings.Default.tst10);
-            outFile = $"{rootPath}\\{outFile}";
+            outFile = $"{this.RootPath}\\{outFile}";
 
             if (!fromCache)
             {
                 //刷新本地文件
-                string cmd = $"/r:{rootPath}\\{scriptFile} /o:{outFile}";
+                string cmd = $"/r:{this.RootPath}\\{scriptFile} /o:{outFile}";
                 GetInfoTelnet(cmd, outFile);
             }
 

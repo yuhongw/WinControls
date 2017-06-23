@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="tst10" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">E:\projs\cnsoft\SwitchInfo\tst10\tst10.exe</Value>
+      <Value Profile="(Default)">f:\projs\cn\wincontrols\SwitchInfo\tst10\tst10.exe</Value>
     </Setting>
   </Settings>
 </SettingsFile>

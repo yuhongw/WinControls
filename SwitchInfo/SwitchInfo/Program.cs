@@ -10,7 +10,7 @@ namespace SwitchInfo
     {
         public static void Main()
         {
-            SwitchReader switchReader = new SwitchReader();
+            SwitchReader switchReader = new SwitchReader(Properties.Settings.Default.tst10);
 
             /*
             Console.WriteLine("----Bandwidth----");
