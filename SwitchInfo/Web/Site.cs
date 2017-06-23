@@ -9,9 +9,9 @@ namespace Web
 {
     public class Site
     {
-        public int Num { get; set; }
-        public string Name { get; set; }
-        public int X { get; set; }
+        public int Id { get; set; }             //每个地点的Id,数据以此作为文件夹
+        public string Name { get; set; }        //名称
+        public int X { get; set; }              //显示位置
         public int Y { get; set; }
         public List<KeyValuePair<string,string>> Values { get; set; }
     }
@@ -39,7 +39,7 @@ namespace Web
         public static List<Site> GetSample()
         {
             return new List<Site> {
-                    new Site{  Num=1 , Name="农安", X=100, Y=100 
+                    new Site{  Id=1 , Name="农安", X=100, Y=100 
                     , Values= new List<KeyValuePair<string, string>>
                     {
                         new KeyValuePair<string, string>("输入带宽","10%"),
@@ -51,6 +51,30 @@ namespace Web
                     }
                     }
             };
+        }
+
+        //从原始数据处更新数据
+        public static void UpdateData()
+        {
+            var list = ReadData();
+            {
+                foreach (Site site in list)
+                {
+                    UpdateData(site);
+                }
+            }
+
+            SaveData(list);
+        }
+
+        private static void UpdateData(Site site)
+        {
+            SwitchInfo.SwitchReader swReader = new SwitchInfo.SwitchReader();
+            string path = $"{Properties.Settings.Default.DataPath}\\{site.Id}";
+            if (Directory.Exists(path))
+            {
+                site. swReader.Get1_BandWithInputValue();
+            }
         }
     }
 }
