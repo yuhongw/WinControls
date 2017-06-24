@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SwitchInfo.Properties {
+namespace Web.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -25,19 +25,10 @@ namespace SwitchInfo.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("f:\\projs\\cn\\wincontrols\\SwitchInfo\\tst10\\tst10.exe")]
-        public string tst10 {
-            get {
-                return ((string)(this["tst10"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("E:\\tmp\\switchInfo")]
-        public string rootPath {
+        public string DataPath {
             get {
-                return ((string)(this["rootPath"]));
+                return ((string)(this["DataPath"]));
             }
         }
     }

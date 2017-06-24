@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SwitchInfo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,7 +13,7 @@ namespace Web
         protected List<Site> Data;
         protected void Page_Load(object sender, EventArgs e)
         {
-            SiteSvc siteSvc = new SiteSvc(HttpContext.Current.Server.MapPath(@"~\Data"));
+            SiteSvc siteSvc = new SiteSvc(Properties.Settings.Default.DataPath);
             this.Data = siteSvc.ReadData();
         }
 

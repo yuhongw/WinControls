@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchInfo", "SwitchInfo\SwitchInfo.csproj", "{AA9726BC-ED5A-49E0-AA2A-31FAC2045304}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{EE25B573-0B83-49B1-8CE8-5BD85AAF0C77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTests1", "WebTests1\WebTests1.csproj", "{F84DD9D9-308A-4662-90FF-DD32939490EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchSetting", "SwitchSetting\SwitchSetting.csproj", "{0311B9DE-EDE0-47A0-B2BA-B7DB58231462}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{EE25B573-0B83-49B1-8CE8-5BD85AAF0C77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE25B573-0B83-49B1-8CE8-5BD85AAF0C77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE25B573-0B83-49B1-8CE8-5BD85AAF0C77}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F84DD9D9-308A-4662-90FF-DD32939490EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F84DD9D9-308A-4662-90FF-DD32939490EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F84DD9D9-308A-4662-90FF-DD32939490EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F84DD9D9-308A-4662-90FF-DD32939490EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0311B9DE-EDE0-47A0-B2BA-B7DB58231462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0311B9DE-EDE0-47A0-B2BA-B7DB58231462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0311B9DE-EDE0-47A0-B2BA-B7DB58231462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0311B9DE-EDE0-47A0-B2BA-B7DB58231462}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

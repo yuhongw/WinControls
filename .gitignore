@@ -3,3 +3,8 @@
 ################################################################################
 
 /SwitchInfo/WebTests1/bin/Debug
+/SwitchInfo/SwitchSetting/obj/Debug
+/SwitchInfo/SwitchSetting/bin/Debug
+/SwitchInfo/SwitchInfo/bin/Debug
+/SwitchInfo/SwitchInfo/obj/Debug
+/SwitchInfo/packages/NLog.4.4.11

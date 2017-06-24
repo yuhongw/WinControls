@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SwitchInfo.Properties {
+namespace SwitchSetting.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -25,10 +25,10 @@ namespace SwitchInfo.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("f:\\projs\\cn\\wincontrols\\SwitchInfo\\tst10\\tst10.exe")]
-        public string tst10 {
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public float interval {
             get {
-                return ((string)(this["tst10"]));
+                return ((float)(this["interval"]));
             }
         }
         
