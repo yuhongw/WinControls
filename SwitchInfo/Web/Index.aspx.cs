@@ -9,12 +9,11 @@ namespace Web
 {
     public partial class Index : System.Web.UI.Page
     {
-        protected List<List<KeyValuePair<string, string>>> data;
+        protected List<Site> Data;
         protected void Page_Load(object sender, EventArgs e)
         {
-            var data = SiteSvc.GetSample();
-            SiteSvc.SaveData(data);
-            var list = SiteSvc.ReadData();
+            SiteSvc siteSvc = new SiteSvc(HttpContext.Current.Server.MapPath(@"~\Data"));
+            this.Data = siteSvc.ReadData();
         }
 
         
