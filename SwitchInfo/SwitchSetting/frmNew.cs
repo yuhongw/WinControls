@@ -12,38 +12,35 @@ namespace SwitchSetting
 {
     public partial class frmNew : Form
     {
-        List<Site> data;
-        public string Result { get; set; }
+        public Site data;
+        SiteSvc siteSvc;
         public frmNew()
         {
             InitializeComponent();
         }
 
-        public static frmNew GetForm(List<Site> data)
+        public static frmNew GetForm(SiteSvc svc)
         {
             frmNew frm = new frmNew();
-            frm.data = data;
+            frm.siteSvc = svc;
             return frm;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string name = txtName.Text.Trim();
-            if (name.Length > 0)
+            Site newSite = this.siteSvc.GetSiteTemplate();
+            newSite.Ip = txtIp.Text.Trim();
+            newSite.Name = txtName.Text.Trim();
+            string vInfo = "";
+            if (newSite.IsValid( this.siteSvc.ReadData() as IQueryable<Site>,out vInfo))
             {
-                if (data.Count(x => x.Name == name) == 0)
-                {
-                    Result = name;
-                    Close();
-                }
-                else
-                {
-                    Helpers.ShowError($"地点[{name}]已存在");
-                }
+                //数据在data里
+                data = newSite;
+                Close();
             }
             else
             {
-                Helpers.ShowError("地点错误");
+                Helpers.ShowError(vInfo);
             }
         }
 

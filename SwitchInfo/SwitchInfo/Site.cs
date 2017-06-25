@@ -17,12 +17,44 @@ namespace SwitchInfo
     {
         public int Id { get; set; }             //每个地点的Id,数据以此作为文件夹
         public string Name { get; set; }        //名称
+        public string Ip { get; set; }
         public int X { get; set; }              //显示位置
         public int Y { get; set; }
         public List<KV> Values { get; set; }
     }
 
+    public static class SiteValidator
+    {
+        public static bool IsValid(this Site site,IQueryable<Site> data, out string validatedInfo)
+        {
+            
+            if (string.IsNullOrEmpty(site.Ip.Trim()))
+            {
+                validatedInfo = "Ip 是必填项";
+                return false;
+            }
 
+            if (string.IsNullOrEmpty(site.Name.Trim()))
+            {
+                validatedInfo = "Name 是必填项";
+                return false;
+            }
+
+            if (data.Any(x=>x.Ip == site.Ip && x.Id != site.Id))
+            {
+                validatedInfo = "Ip 不能重复";
+                return false;
+            }
+
+            if (data.Any(x => x.Name == site.Name && x.Id != site.Id))
+            {
+                validatedInfo = "Name 不能重复";
+                return false;
+            }
+            validatedInfo = "";
+            return true;
+        }
+    }
 
     public class SiteSvc
     {
@@ -49,14 +81,13 @@ namespace SwitchInfo
             }
         }
 
-        public void AddNewSite(string name)
+        public void AddNewSite(Site site)
         {
-            Site newSite = GetSiteTemplate();
-            newSite.Name = name;
+            
             var list = ReadData();
             int newId = list.Max(x => x.Id) + 1;
-            newSite.Id = newId;
-            list.Add(newSite);
+            site.Id = newId;
+            list.Add(site);
             SaveData(list);
             int firstId = list.First().Id;
             Helpers.CopyDirectory(Path.Combine(RootPath,firstId.ToString()), Path.Combine(RootPath,newId.ToString()));
@@ -97,7 +128,7 @@ namespace SwitchInfo
             return site;
         }
 
-        private Site GetSiteTemplate()
+        public Site GetSiteTemplate()
         {
             return new Site
             {
@@ -137,6 +168,13 @@ namespace SwitchInfo
                     kv.Value = swReader.Values[kv.Key];
                 }
             }
+        }
+
+        public void DeleteSite(Site site)
+        {
+            List<Site> list = ReadData();
+            list.Remove(list.First(x=>x.Id == site.Id));
+            SaveData(list);
         }
     }
 }

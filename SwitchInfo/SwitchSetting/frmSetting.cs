@@ -33,11 +33,11 @@ namespace SwitchSetting
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmNew frm = frmNew.GetForm(data);
+            frmNew frm = frmNew.GetForm(svc);
             frm.ShowDialog();
-            if (!string.IsNullOrEmpty(frm.Result))
+            if (frm.data!=null)
             {
-                svc.AddNewSite(frm.Result);
+                svc.AddNewSite(frm.data);
                 BindData();
             }
             else
@@ -49,6 +49,18 @@ namespace SwitchSetting
         private void button4_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("确认要删除吗?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                if (gv.CurrentRow.DataBoundItem != null)
+                {
+                    svc.DeleteSite(gv.CurrentRow.DataBoundItem as Site);
+                    BindData();
+                }
+            }
         }
     }
 }

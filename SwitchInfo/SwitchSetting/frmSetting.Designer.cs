@@ -30,12 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gv = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -54,18 +55,6 @@
             this.gv.Size = new System.Drawing.Size(477, 269);
             this.gv.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(531, 168);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 104);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "+ 增加";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // ColumnID
             // 
             this.ColumnID.DataPropertyName = "Id";
@@ -81,6 +70,18 @@
             this.ColumnName.ReadOnly = true;
             this.ColumnName.Width = 300;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.Location = new System.Drawing.Point(510, 83);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 104);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "+ 增加";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -93,13 +94,25 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.Location = new System.Drawing.Point(641, 168);
+            this.button4.Location = new System.Drawing.Point(620, 83);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(104, 104);
             this.button4.TabIndex = 5;
             this.button4.Text = "E&xit";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDelete.Location = new System.Drawing.Point(511, 194);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(104, 104);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "- 删除";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // frmSetting
             // 
@@ -108,6 +121,7 @@
             this.ClientSize = new System.Drawing.Size(874, 491);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.gv);
             this.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -131,6 +145,7 @@
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 
