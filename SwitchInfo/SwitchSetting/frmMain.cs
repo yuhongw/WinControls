@@ -12,12 +12,14 @@ namespace SwitchSetting
 {
     public partial class frmMain : Form
     {
+        SiteSvc svc;
         public frmMain()
         {
             InitializeComponent();
             timer.Interval =(int) Properties.Settings.Default.interval*1000;
             timer.Start();
             listBox1.Items.Add("Start updating..");
+            svc = new SiteSvc(Helpers.GetRootPath(),Helpers.GetOriginToolPath());
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -39,7 +41,7 @@ namespace SwitchSetting
         {
             try
             {
-                SwitchInfo.SiteSvc.UpdateDataFromRemote(Properties.Settings.Default.rootPath);
+                svc.UpdateDataFromRemote();
                 Invoke(new Action(() =>
                 {
                     listBox1.Items.Add($"Updated:{DateTime.Now}");

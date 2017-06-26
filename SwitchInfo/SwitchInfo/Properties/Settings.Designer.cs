@@ -31,14 +31,5 @@ namespace SwitchInfo.Properties {
                 return ((string)(this["tst10"]));
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("E:\\tmp\\switchInfo")]
-        public string rootPath {
-            get {
-                return ((string)(this["rootPath"]));
-            }
-        }
     }
 }

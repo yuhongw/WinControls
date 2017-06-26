@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -17,14 +18,14 @@ namespace SwitchSetting
         public frmSetting()
         {
             InitializeComponent();
-            svc = new SiteSvc(Properties.Settings.Default.rootPath);
+            string rootPath = Helpers.GetRootPath();
+            if (!Directory.Exists(rootPath)) Directory.CreateDirectory(rootPath);
+            svc = new SiteSvc(rootPath,Helpers.GetOriginToolPath());
             BindData();
-
         }
 
         private void BindData()
         {
-           
             gv.AutoGenerateColumns = false;
             data = svc.ReadData();
             gv.DataSource = null;
@@ -60,6 +61,20 @@ namespace SwitchSetting
                     svc.DeleteSite(gv.CurrentRow.DataBoundItem as Site);
                     BindData();
                 }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            int val = 0;
+            if (int.TryParse(textBox1.Text, out val) && val>0)
+            {
+                Properties.Settings.Default.interval = val;
             }
         }
     }

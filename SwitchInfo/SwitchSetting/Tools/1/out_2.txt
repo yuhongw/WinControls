@@ -1,0 +1,29 @@
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:huawei
+
+Username:huawei
+Password:Huawei@123
+
+Warning: Please change the original password. A password must be at least 8 characters and consist of upper-case letters, lower-case letters, digits, and special characters.
+The password needs to be changed. Change now? [Y/N]:N
+N
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2017-06-24 21:34:31+08:00.
+Info: Latest accessed  IP: 36.102.227.235  Time: 2017-06-24 21:34:30+08:00  Failed: 0
+
+<xiaoyuan-ME60.MAN>display max-onlineusers
+display max-onlineusers
+ Max online users since startup             : 21417
+ Time of max online users                   : 2017-05-22 22:13:07
+ Max accounting-ready users since startup   : 21413
+ Time of max accounting-ready users         : 2017-05-22 22:13:07
+<xiaoyuan-ME60.MAN>q
+q
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 0.

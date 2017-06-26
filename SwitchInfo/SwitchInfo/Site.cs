@@ -63,21 +63,30 @@ namespace SwitchInfo
 
         
 
-        private string RootPath;    
-        public SiteSvc(string path)
+        private string RootPath;
+        private string OriginToolPath;
+        public SiteSvc(string path,string originToolPath)
         {
             RootPath = path;
+            OriginToolPath = originToolPath;
         }
        
         public List<Site> ReadData()
         {
             string fn = $"{RootPath}/sites.xml";
-            XmlSerializer ser = new XmlSerializer(typeof(List<Site>));
-            using (var fs = System.IO.File.OpenRead(fn))
+            if (File.Exists(fn))
             {
-                var list = ser.Deserialize(fs) as List<Site>;
-                UpdateData(list);
-                return list;
+                XmlSerializer ser = new XmlSerializer(typeof(List<Site>));
+                using (var fs = System.IO.File.OpenRead(fn))
+                {
+                    var list = ser.Deserialize(fs) as List<Site>;
+                    UpdateData(list);
+                    return list;
+                }
+            }
+            else
+            {
+                return new List<Site>();
             }
         }
 
@@ -89,18 +98,35 @@ namespace SwitchInfo
             site.Id = newId;
             list.Add(site);
             SaveData(list);
-            int firstId = list.First().Id;
-            Helpers.CopyDirectory(Path.Combine(RootPath,firstId.ToString()), Path.Combine(RootPath,newId.ToString()));
+            CopyFilesAndReplaceAddr( Path.Combine(RootPath,newId.ToString()),site.Ip);
+        }
+
+        private void CopyFilesAndReplaceAddr(string newPath, string ip)
+        {
+            var files = Directory.GetFiles(OriginToolPath);
+            foreach (string f in files)
+            {
+                string fn = Path.GetFileName(f);
+                string destFn = Path.Combine(newPath, fn);
+                if (fn.StartsWith("script_"))
+                {
+                    string txt = File.ReadAllText(f).Replace("<IP>", ip);
+                    File.WriteAllText(destFn, txt);
+                }
+                else
+                {
+                    File.Copy(f, destFn);
+                }
+            }
         }
 
         //从远程服务器更新数据
-        public static void UpdateDataFromRemote(string rootPath)
+        public void UpdateDataFromRemote()
         {
-            SiteSvc svc = new SiteSvc(rootPath);
-            List<Site> sites = svc.ReadData();
+            List<Site> sites = ReadData();
             foreach (Site site in sites)
             {
-                using (SwitchInfo.SwitchReader reader = new SwitchInfo.SwitchReader($"{Properties.Settings.Default.rootPath}/{site.Id}"))
+                using (SwitchInfo.SwitchReader reader = new SwitchInfo.SwitchReader($"{RootPath}/{site.Id}"))
                 {
                     reader.BatchGet();
                 }

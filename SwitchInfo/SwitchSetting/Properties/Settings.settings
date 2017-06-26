@@ -2,11 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SwitchSetting.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="interval" Type="System.Single" Scope="Application">
+    <Setting Name="interval" Type="System.Single" Scope="User">
       <Value Profile="(Default)">10</Value>
-    </Setting>
-    <Setting Name="rootPath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">E:\tmp\switchInfo</Value>
     </Setting>
   </Settings>
 </SettingsFile>

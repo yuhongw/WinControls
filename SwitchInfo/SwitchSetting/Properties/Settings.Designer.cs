@@ -23,21 +23,15 @@ namespace SwitchSetting.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("10")]
         public float interval {
             get {
                 return ((float)(this["interval"]));
             }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("E:\\tmp\\switchInfo")]
-        public string rootPath {
-            get {
-                return ((string)(this["rootPath"]));
+            set {
+                this["interval"] = value;
             }
         }
     }

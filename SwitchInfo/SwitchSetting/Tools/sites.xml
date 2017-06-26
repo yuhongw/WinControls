@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<ArrayOfSite xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Site>
+    <Id>1</Id>
+    <Name>农安</Name>
+    <X>100</X>
+    <Y>100</Y>
+    <Values>
+      <KV>
+        <Key>输入带宽</Key>
+        <Value>   46%</Value>
+      </KV>
+      <KV>
+        <Key>在线用户</Key>
+        <Value> 21417</Value>
+      </KV>
+      <KV>
+        <Key>访问用户SL2</Key>
+        <Value> 7767</Value>
+      </KV>
+      <KV>
+        <Key>访问用户SL3</Key>
+        <Value> 5847</Value>
+      </KV>
+      <KV>
+        <Key>访问用户SL4</Key>
+        <Value> 5847</Value>
+      </KV>
+    </Values>
+  </Site>
+  <Site>
+    <Id>2</Id>
+    <Name>九台</Name>
+    <X>100</X>
+    <Y>100</Y>
+    <Values>
+      <KV>
+        <Key>输入带宽</Key>
+        <Value>   46%</Value>
+      </KV>
+      <KV>
+        <Key>在线用户</Key>
+        <Value> 21417</Value>
+      </KV>
+      <KV>
+        <Key>访问用户SL2</Key>
+        <Value> 7770</Value>
+      </KV>
+      <KV>
+        <Key>访问用户SL3</Key>
+        <Value> 5847</Value>
+      </KV>
+      <KV>
+        <Key>访问用户SL4</Key>
+        <Value> 5847</Value>
+      </KV>
+    </Values>
+  </Site>
+</ArrayOfSite>

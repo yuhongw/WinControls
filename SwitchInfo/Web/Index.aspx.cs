@@ -13,7 +13,7 @@ namespace Web
         protected List<Site> Data;
         protected void Page_Load(object sender, EventArgs e)
         {
-            SiteSvc siteSvc = new SiteSvc(Properties.Settings.Default.DataPath);
+            SiteSvc siteSvc = new SiteSvc(Properties.Settings.Default.DataPath,"");
             this.Data = siteSvc.ReadData();
         }
 
