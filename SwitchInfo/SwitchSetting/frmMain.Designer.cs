@@ -63,7 +63,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(460, 106);
+            this.button1.Location = new System.Drawing.Point(484, 106);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 104);
             this.button1.TabIndex = 2;
@@ -74,27 +74,29 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(461, 216);
+            this.button2.Location = new System.Drawing.Point(729, 147);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 104);
             this.button2.TabIndex = 2;
             this.button2.Text = "Log Info";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(570, 106);
+            this.button3.Location = new System.Drawing.Point(767, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 104);
             this.button3.TabIndex = 2;
             this.button3.Text = "Reset";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.Location = new System.Drawing.Point(571, 216);
+            this.button4.Location = new System.Drawing.Point(484, 216);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(104, 104);
             this.button4.TabIndex = 2;
