@@ -25,7 +25,7 @@ namespace Web.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("E:\\tmp\\switchInfo")]
+        [global::System.Configuration.DefaultSettingValueAttribute("E:\\projs\\cnsoft\\WinControls\\SwitchInfo\\SwitchSetting\\bin\\Debug\\work")]
         public string DataPath {
             get {
                 return ((string)(this["DataPath"]));

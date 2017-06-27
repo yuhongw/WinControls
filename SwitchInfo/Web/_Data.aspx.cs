@@ -8,13 +8,13 @@ using System.Web.UI.WebControls;
 
 namespace Web
 {
-    public partial class Index : System.Web.UI.Page
+    public partial class _Data : System.Web.UI.Page
     {
-        protected List<Site> Data;
+        protected Site site { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            SiteSvc siteSvc = new SiteSvc(Properties.Settings.Default.DataPath,"");
-            this.Data = siteSvc.ReadData();
+            SiteSvc siteSvc = new SiteSvc(Properties.Settings.Default.DataPath, "");
+            this.site = siteSvc.ReadData().First();
         }
     }
 }
