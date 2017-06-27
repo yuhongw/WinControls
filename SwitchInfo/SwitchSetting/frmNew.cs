@@ -35,7 +35,7 @@ namespace SwitchSetting
             newSite.Pwd = txtPwd.Text;
 
             string vInfo = "";
-            if (newSite.IsValid( this.siteSvc.ReadData() as IQueryable<Site>,out vInfo))
+            if (newSite.IsValid( this.siteSvc.ReadData(),out vInfo))
             {
                 //数据在data里
                 data = newSite;
@@ -50,6 +50,15 @@ namespace SwitchSetting
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Site site = this.siteSvc.GetDataSample();
+            txtIp.Text = site.Ip;
+            txtName.Text = site.Name;
+            txtUserName.Text = site.UserName;
+            txtPwd.Text = site.Pwd;
         }
     }
 }
