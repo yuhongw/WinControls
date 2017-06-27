@@ -1,0 +1,51 @@
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:huawei
+huawei
+Password:Huawei@123
+
+Warning: Please change the original password. A password must be at least 8 characters and consist of upper-case letters, lower-case letters, digits, and special characters.
+The password needs to be changed. Change now? [Y/N]:N
+N
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2017-06-24 21:34:33+08:00.
+Info: Latest accessed  IP: 36.102.227.235  Time: 2017-06-24 21:34:32+08:00  Failed: 0
+
+<xiaoyuan-ME60.MAN>display access-user slot 3
+display access-user slot 3
+  ------------------------------------------------------------------------------
+  UserID  Username                Interface      IP address       MAC
+          Vlan          IPv6 address             Access type
+  ------------------------------------------------------------------------------
+  187     xiaoyuan-ME60.MAN-0...  Eth-Trunk2.3104  -                3c46-d83c-73de
+          3104/727      -                        IPOE           
+  453     xiaoyuan-ME60.MAN-0...  Eth-Trunk2.3103  10.240.127.181   34e6-d755-61c9
+          3103/2152     -                        IPOE           
+  472     xiaoyuan-ME60.MAN-0...  Eth-Trunk2.3105  10.150.126.113   1418-77cd-4277
+          3105/2545     -                        IPOE           
+  545     xiaoyuan-ME60.MAN-0...  Eth-Trunk2.3103  10.240.106.0     e0db-55cc-853b
+          3103/289      -                        IPOE           
+  551     xiaoyuan-ME60.MAN-0...  Eth-Trunk2.3107  10.150.209.90    28d2-447e-d672
+          3107/1672     -                        IPOE           
+  590     xiaoyuan-ME60.MAN-0...  Eth-Trunk2.3103  10.240.66.119    2c56-dcac-4552
+          3103/2164     -                        IPOE           
+  637     xiaoyuan-ME60.MAN-0...  Eth-Trunk2.3107  10.150.210.122   3417-eb86-d651
+          3107/436      -                        IPOE           
+  719     xiaoyuan-ME60.MAN-0...  Eth-Trunk2.3103  10.240.125.40    507b-9d66-227f
+          3103/2179     -                        IPOE           
+  776     xiaoyuan-ME60.MAN-0...  Eth-Trunk2.3103  10.240.110.81    24f5-aac2-0c1a
+          3103/1605     -                        IPOE           
+  810     xiaoyuan-ME60.MAN-0...  Eth-Trunk2.3107  10.150.210.159   d8cb-8af1-c6e7
+          3107/2288     -                        IPOE           
+  ---- More ----q[42D                                          [42D
+  ------------------------------------------------------------------------------
+  Normal users                       : 5847
+  RUI Local users                    : 0
+  RUI Remote users                   : 0
+  Total users                        : 5847
+<xiaoyuan-ME60.MAN>q

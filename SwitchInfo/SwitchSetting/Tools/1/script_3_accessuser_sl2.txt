@@ -1,0 +1,14 @@
+<IP>
+WAIT "Username:"
+SEND "huawei\m"
+WAIT "Password:"
+SEND "Huawei@123\m"
+WAIT "Change now? [Y/N]:"
+SEND "N\m"
+WAIT "<xiaoyuan-ME60.MAN>"
+SEND "display access-user slot 2\m"
+WAIT "More ----"
+SEND "q"
+WAIT "<xiaoyuan-ME60.MAN>"
+SEND "q\m"
+
