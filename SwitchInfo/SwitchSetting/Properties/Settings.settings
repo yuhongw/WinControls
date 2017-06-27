@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SwitchSetting.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="interval" Type="System.Single" Scope="User">
+    <Setting Name="interval" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">10</Value>
     </Setting>
   </Settings>

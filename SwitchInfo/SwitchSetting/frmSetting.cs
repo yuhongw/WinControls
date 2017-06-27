@@ -19,6 +19,8 @@ namespace SwitchSetting
         {
             InitializeComponent();
             string rootPath = Helpers.GetRootPath();
+            txtRootPath.Text = rootPath;
+            txtInterval.Text = Properties.Settings.Default.interval.ToString();
             if (!Directory.Exists(rootPath)) Directory.CreateDirectory(rootPath);
             svc = new SiteSvc(rootPath,Helpers.GetOriginToolPath());
             BindData();
@@ -72,9 +74,15 @@ namespace SwitchSetting
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             int val = 0;
-            if (int.TryParse(textBox1.Text, out val) && val>0)
+            if (int.TryParse(txtInterval.Text, out val) && val > 0)
             {
                 Properties.Settings.Default.interval = val;
+            }
+            else
+            {
+                txtInterval.Text = Properties.Settings.Default.interval.ToString();
+                Helpers.ShowError("更新时间间隔设置错误。");
+                
             }
         }
     }

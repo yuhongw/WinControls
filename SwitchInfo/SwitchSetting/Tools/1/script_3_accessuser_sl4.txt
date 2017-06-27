@@ -1,8 +1,8 @@
 <IP>
 WAIT "Username:"
-SEND "huawei\m"
+SEND "<username>\m"
 WAIT "Password:"
-SEND "Huawei@123\m"
+SEND "<pwd>\m"
 WAIT "Change now? [Y/N]:"
 SEND "N\m"
 WAIT "<xiaoyuan-ME60.MAN>"

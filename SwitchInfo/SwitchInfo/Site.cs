@@ -18,8 +18,11 @@ namespace SwitchInfo
         public int Id { get; set; }             //每个地点的Id,数据以此作为文件夹
         public string Name { get; set; }        //名称
         public string Ip { get; set; }
+        public string UserName { get; set; }
+        public string Pwd { get; set; }
         public int X { get; set; }              //显示位置
         public int Y { get; set; }
+
         public List<KV> Values { get; set; }
     }
 
@@ -36,9 +39,22 @@ namespace SwitchInfo
 
             if (string.IsNullOrEmpty(site.Name.Trim()))
             {
-                validatedInfo = "Name 是必填项";
+                validatedInfo = "[名称]是必填项";
                 return false;
             }
+
+            if (string.IsNullOrEmpty(site.UserName.Trim()))
+            {
+                validatedInfo = "[用户名]是必填项";
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(site.Pwd.Trim()))
+            {
+                validatedInfo = "[密码]是必填项";
+                return false;
+            }
+
 
             if (data.Any(x=>x.Ip == site.Ip && x.Id != site.Id))
             {
@@ -98,10 +114,10 @@ namespace SwitchInfo
             site.Id = newId;
             list.Add(site);
             SaveData(list);
-            CopyFilesAndReplaceAddr( Path.Combine(RootPath,newId.ToString()),site.Ip);
+            CopyFilesAndReplaceAddr( Path.Combine(RootPath,newId.ToString()),site);
         }
 
-        private void CopyFilesAndReplaceAddr(string newPath, string ip)
+        private void CopyFilesAndReplaceAddr(string newPath, Site site)
         {
             var files = Directory.GetFiles(OriginToolPath);
             foreach (string f in files)
@@ -110,7 +126,10 @@ namespace SwitchInfo
                 string destFn = Path.Combine(newPath, fn);
                 if (fn.StartsWith("script_"))
                 {
-                    string txt = File.ReadAllText(f).Replace("<IP>", ip);
+                    string txt = File.ReadAllText(f)
+                        .Replace("<IP>", site.Ip)
+                        .Replace("<username>",site.UserName)
+                        .Replace("<pwd>",site.Pwd);
                     File.WriteAllText(destFn, txt);
                 }
                 else
@@ -151,6 +170,16 @@ namespace SwitchInfo
             {
                 GetSiteTemplate()
             };
+            return site;
+        }
+
+        public Site GetDataSample()
+        {
+            Site site = GetSiteTemplate();
+            site.Name = "农安";
+            site.Ip = "222.168.94.36";
+            site.UserName = "huawei";
+            site.Pwd = "Huawei@123";
             return site;
         }
 

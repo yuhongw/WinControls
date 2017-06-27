@@ -31,6 +31,9 @@ namespace SwitchSetting
             Site newSite = this.siteSvc.GetSiteTemplate();
             newSite.Ip = txtIp.Text.Trim();
             newSite.Name = txtName.Text.Trim();
+            newSite.UserName = txtUserName.Text;
+            newSite.Pwd = txtPwd.Text;
+
             string vInfo = "";
             if (newSite.IsValid( this.siteSvc.ReadData() as IQueryable<Site>,out vInfo))
             {

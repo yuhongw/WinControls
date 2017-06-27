@@ -3,6 +3,7 @@
   <Site>
     <Id>1</Id>
     <Name>农安</Name>
+    <Ip></Ip>
     <X>100</X>
     <Y>100</Y>
     <Values>

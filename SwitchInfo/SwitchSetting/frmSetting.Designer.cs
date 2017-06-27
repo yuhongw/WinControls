@@ -38,9 +38,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtRoot = new System.Windows.Forms.TextBox();
+            this.txtRootPath = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtInterval = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gv)).BeginInit();
@@ -129,13 +129,13 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "工作目录";
             // 
-            // txtRoot
+            // txtRootPath
             // 
-            this.txtRoot.Location = new System.Drawing.Point(92, 21);
-            this.txtRoot.Name = "txtRoot";
-            this.txtRoot.ReadOnly = true;
-            this.txtRoot.Size = new System.Drawing.Size(298, 26);
-            this.txtRoot.TabIndex = 7;
+            this.txtRootPath.Location = new System.Drawing.Point(92, 21);
+            this.txtRootPath.Name = "txtRootPath";
+            this.txtRootPath.ReadOnly = true;
+            this.txtRootPath.Size = new System.Drawing.Size(645, 26);
+            this.txtRootPath.TabIndex = 7;
             // 
             // button2
             // 
@@ -150,13 +150,13 @@
             this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // txtInterval
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(54, 26);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtInterval.Location = new System.Drawing.Point(92, 53);
+            this.txtInterval.Name = "txtInterval";
+            this.txtInterval.Size = new System.Drawing.Size(54, 26);
+            this.txtInterval.TabIndex = 10;
+            this.txtInterval.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -181,11 +181,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 491);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtInterval);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.txtRoot);
+            this.Controls.Add(this.txtRootPath);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label1);
@@ -215,9 +215,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtRoot;
+        private System.Windows.Forms.TextBox txtRootPath;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtInterval;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
     }

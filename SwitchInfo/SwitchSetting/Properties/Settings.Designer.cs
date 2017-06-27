@@ -26,9 +26,9 @@ namespace SwitchSetting.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("10")]
-        public float interval {
+        public int interval {
             get {
-                return ((float)(this["interval"]));
+                return ((int)(this["interval"]));
             }
             set {
                 this["interval"] = value;
