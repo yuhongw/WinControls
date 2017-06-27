@@ -28,7 +28,7 @@ namespace SwitchInfo
 
     public static class SiteValidator
     {
-        public static bool IsValid(this Site site,IQueryable<Site> data, out string validatedInfo)
+        public static bool IsValid(this Site site,IEnumerable<Site> data, out string validatedInfo)
         {
             
             if (string.IsNullOrEmpty(site.Ip.Trim()))
@@ -110,7 +110,11 @@ namespace SwitchInfo
         {
             
             var list = ReadData();
-            int newId = list.Max(x => x.Id) + 1;
+            int newId = 1;
+            if (list.Count > 0)
+            {
+                newId = list.Max(x => x.Id) + 1;
+            }
             site.Id = newId;
             list.Add(site);
             SaveData(list);
@@ -124,6 +128,7 @@ namespace SwitchInfo
             {
                 string fn = Path.GetFileName(f);
                 string destFn = Path.Combine(newPath, fn);
+                if (!Directory.Exists(Path.GetDirectoryName(destFn))) Directory.CreateDirectory(Path.GetDirectoryName(destFn));
                 if (fn.StartsWith("script_"))
                 {
                     string txt = File.ReadAllText(f)
