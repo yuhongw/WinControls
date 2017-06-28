@@ -1,0 +1,35 @@
+
+Telnet Scripting Tool v.1.0
+by Albert Yale ay@aci.qc.ca http://ay.home.ml.org/
+--------------------------------------------------
+
+Description
+-----------
+
+    a utility to automate telnet sessions (like calling dip on a remote
+    linux system)
+
+Installation
+------------
+
+    download, unzip, run
+
+Usage
+-----
+
+    execute with no arguments and you will get a help window that
+    explains everything
+
+Easter egg
+----------
+
+    somewhere in the about box
+
+Size
+----
+
+    TST10.zip 194,928 bytes
+
+ --------
+| Enjoy! |
+ --------

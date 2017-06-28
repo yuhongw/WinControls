@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="Web.Index" %>
 <%@ Import Namespace="SwitchInfo" %>
+<%@ Import Namespace="Web.Properties" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,23 +9,30 @@
     <title></title>
     <script src="Script/jquery-1.7.1.min.js"></script>
     <style>
+        html,body {
+            margin:0;
+        }
         .device {
              font-family:微软雅黑;
-             font-size:8pt;
+             font-size:12pt;
              color:white;
              display:block;
              position:absolute;
-             top:175px;
-             left:120px;
+             top:258px;
+             left:235px;
 
         }
             .device td {
-                
-                line-height:12px;
+                min-width:100px;
+                line-height:21px;
             }
+
+                .right {
+                    text-align:right;
+                }
            
             .device .siteName {
-                font-size:12pt;
+                font-size:14pt;
                 text-align:center;
             }
     </style>
@@ -32,7 +40,7 @@
 <body>
 
     <div>
-        <img src="UI.jpg" />
+        <img src="UI.png" style="width:1600px; height:1000px;" />
     </div>
     <div class="device" id="deviceCont">
     </div>
@@ -48,5 +56,5 @@
     loadData();
     setInterval(function () {
         loadData();
-    }, 5000);
+    }, <%=Interval%> *1000);
 </script>

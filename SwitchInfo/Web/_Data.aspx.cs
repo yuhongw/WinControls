@@ -14,7 +14,9 @@ namespace Web
         protected void Page_Load(object sender, EventArgs e)
         {
             SiteSvc siteSvc = new SiteSvc(Properties.Settings.Default.DataPath, "");
-            this.site = siteSvc.ReadData().First();
+            var list = siteSvc.ReadData();
+            if (list.Count>0)
+                this.site = siteSvc.ReadData().First();
         }
     }
 }

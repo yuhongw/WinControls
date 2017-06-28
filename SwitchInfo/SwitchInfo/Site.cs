@@ -198,6 +198,7 @@ namespace SwitchInfo
                 Y = 100,
                 Values = new List<KV>{
                 new KV{ Key="输入带宽",Value=""},
+                new KV{ Key="输出带宽",Value=""},
                 new KV{ Key="在线用户",Value=""},
                 new KV{ Key="访问用户SL2",Value=""},
                 new KV{ Key="访问用户SL3",Value=""},

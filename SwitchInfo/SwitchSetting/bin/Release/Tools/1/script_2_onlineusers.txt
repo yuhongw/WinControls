@@ -1,0 +1,12 @@
+<IP>
+WAIT "Username:"
+SEND "<username>\m"
+WAIT "Password:"
+SEND "<pwd>\m"
+WAIT "Change now? [Y/N]:"
+SEND "N\m"
+WAIT "<xiaoyuan-ME60.MAN>"
+SEND "display max-onlineusers\m"
+WAIT "<xiaoyuan-ME60.MAN>"
+SEND "q\m"
+
