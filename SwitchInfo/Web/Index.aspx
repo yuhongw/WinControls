@@ -34,11 +34,8 @@
     <div>
         <img src="UI.jpg" />
     </div>
-
-    <%foreach (Site site in this.Data){%>
     <div class="device" id="deviceCont">
     </div>
-    <%}%>
 </body>
 </html>
 
