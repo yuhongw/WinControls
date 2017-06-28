@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="DataPath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">E:\projs\cnsoft\WinControls\SwitchInfo\SwitchSetting\bin\Debug\work</Value>
+      <Value Profile="(Default)">f:\published\switchInfo</Value>
     </Setting>
   </Settings>
 </SettingsFile>
