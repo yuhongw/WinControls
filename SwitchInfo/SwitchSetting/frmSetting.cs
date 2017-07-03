@@ -23,30 +23,26 @@ namespace SwitchSetting
             txtInterval.Text = Properties.Settings.Default.interval.ToString();
             if (!Directory.Exists(rootPath)) Directory.CreateDirectory(rootPath);
             svc = new SiteSvc(rootPath,Helpers.GetOriginToolPath());
+            data = svc.ReadData();
             BindData();
         }
 
         private void BindData()
         {
             gv.AutoGenerateColumns = false;
-            data = svc.ReadData();
             gv.DataSource = null;
             gv.DataSource = data;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmNew frm = frmNew.GetForm(svc);
-            frm.ShowDialog();
-            if (frm.data!=null)
-            {
-                svc.AddNewSite(frm.data);
-                BindData();
-            }
-            else
-            {
-                Helpers.ShowError("已取消");
-            }
+            //frmNew frm = frmNew.GetForm(svc);
+            //frm.ShowDialog();
+            var site = svc.GetDataSample();
+            site.Id = data.Count==0?1:data.Max(x => x.Id) + 1;
+            data.Add(site);
+            //svc.AddNewSite(site);
+            BindData();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -60,7 +56,8 @@ namespace SwitchSetting
             {
                 if (gv.CurrentRow.DataBoundItem != null)
                 {
-                    svc.DeleteSite(gv.CurrentRow.DataBoundItem as Site);
+                    //svc.DeleteSite(gv.CurrentRow.DataBoundItem as Site);
+                    data.Remove(data.First(x => x.Id == (gv.CurrentRow.DataBoundItem as Site).Id));
                     BindData();
                 }
             }
@@ -68,7 +65,7 @@ namespace SwitchSetting
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            svc.SaveData(data);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

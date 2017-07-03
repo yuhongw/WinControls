@@ -7,8 +7,8 @@
     <%foreach (KV kv in site.Values)
         {%>
     <tr>
-        <td><%=kv.Key%></td>
-        <td class="right"><%=kv.Value%></td>
+        <td class="name"><%=kv.Key%></td>
+        <td class="value right"><%=kv.Value%></td>
     </tr>
     <%}
         }%>

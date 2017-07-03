@@ -1,0 +1,387 @@
+<?xml version="1.0"?>
+<ArrayOfSite xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Site>
+    <Id>2</Id>
+    <Name>繁荣路ME60-1 绿园</Name>
+    <Ip>222.168.0.24</Ip>
+    <UserName>huawei</UserName>
+    <Pwd>Huawei@123</Pwd>
+    <X>100</X>
+    <Y>100</Y>
+    <isNew>false</isNew>
+    <Values>
+      <KV>
+        <Key>输入带宽</Key>
+        <Value>   46%</Value>
+      </KV>
+      <KV>
+        <Key>在线用户</Key>
+        <Value> 21417</Value>
+      </KV>
+      <KV>
+        <Key>访问用户SL2</Key>
+        <Value> 7767</Value>
+      </KV>
+      <KV>
+        <Key>访问用户SL3</Key>
+        <Value> 5847</Value>
+      </KV>
+      <KV>
+        <Key>访问用户SL4</Key>
+        <Value> 5847</Value>
+      </KV>
+    </Values>
+  </Site>
+  <Site>
+    <Id>3</Id>
+    <Name>513MSE 绿园</Name>
+    <Ip>222.168.0.39</Ip>
+    <UserName>huawei</UserName>
+    <Pwd>Huawei@123</Pwd>
+    <X>100</X>
+    <Y>100</Y>
+    <isNew>false</isNew>
+    <Values>
+      <KV>
+        <Key>输入带宽</Key>
+        <Value>   46%</Value>
+      </KV>
+      <KV>
+        <Key>在线用户</Key>
+        <Value> 21417</Value>
+      </KV>
+      <KV>
+        <Key>访问用户SL2</Key>
+        <Value> 7767</Value>
+      </KV>
+      <KV>
+        <Key>访问用户SL3</Key>
+        <Value> 5847</Value>
+      </KV>
+      <KV>
+        <Key>访问用户SL4</Key>
+        <Value> 5847</Value>
+      </KV>
+    </Values>
+  </Site>
+  <Site>
+    <Id>4</Id>
+    <Name>安达街ME60 朝阳</Name>
+    <Ip>222.168.0.27</Ip>
+    <UserName>huawei</UserName>
+    <Pwd>Huawei@123</Pwd>
+    <X>100</X>
+    <Y>100</Y>
+    <isNew>false</isNew>
+    <Values>
+      <KV>
+        <Key>输入带宽</Key>
+        <Value>   46%</Value>
+      </KV>
+      <KV>
+        <Key>在线用户</Key>
+        <Value> 21417</Value>
+      </KV>
+      <KV>
+        <Key>访问用户SL2</Key>
+        <Value> 7767</Value>
+      </KV>
+      <KV>
+        <Key>访问用户SL3</Key>
+        <Value> 5847</Value>
+      </KV>
+      <KV>
+        <Key>访问用户SL4</Key>
+        <Value> 5847</Value>
+      </KV>
+    </Values>
+  </Site>
+  <Site>
+    <Id>5</Id>
+    <Name>繁荣路ME60-2 绿园</Name>
+    <Ip>222.168.94.36</Ip>
+    <UserName>huawei</UserName>
+    <Pwd>Huawei@123</Pwd>
+    <X>100</X>
+    <Y>100</Y>
+    <isNew>false</isNew>
+    <Values>
+      <KV>
+        <Key>输入带宽</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>输出带宽</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>在线用户</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL2</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL3</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL4</Key>
+        <Value />
+      </KV>
+    </Values>
+  </Site>
+  <Site>
+    <Id>6</Id>
+    <Name>富贵居ME60 朝阳/南关</Name>
+    <Ip>222.168.94.36</Ip>
+    <UserName>huawei</UserName>
+    <Pwd>Huawei@123</Pwd>
+    <X>100</X>
+    <Y>100</Y>
+    <isNew>false</isNew>
+    <Values>
+      <KV>
+        <Key>输入带宽</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>输出带宽</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>在线用户</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL2</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL3</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL4</Key>
+        <Value />
+      </KV>
+    </Values>
+  </Site>
+  <Site>
+    <Id>7</Id>
+    <Name>富贵居MSE 朝阳/南关</Name>
+    <Ip>222.168.94.36</Ip>
+    <UserName>huawei</UserName>
+    <Pwd>Huawei@123</Pwd>
+    <X>100</X>
+    <Y>100</Y>
+    <isNew>false</isNew>
+    <Values>
+      <KV>
+        <Key>输入带宽</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>输出带宽</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>在线用户</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL2</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL3</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL4</Key>
+        <Value />
+      </KV>
+    </Values>
+  </Site>
+  <Site>
+    <Id>8</Id>
+    <Name>前进ME60 高新</Name>
+    <Ip>222.168.94.36</Ip>
+    <UserName>huawei</UserName>
+    <Pwd>Huawei@123</Pwd>
+    <X>100</X>
+    <Y>100</Y>
+    <isNew>false</isNew>
+    <Values>
+      <KV>
+        <Key>输入带宽</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>输出带宽</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>在线用户</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL2</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL3</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL4</Key>
+        <Value />
+      </KV>
+    </Values>
+  </Site>
+  <Site>
+    <Id>9</Id>
+    <Name>前进MSE 高新</Name>
+    <Ip>222.168.94.36</Ip>
+    <UserName>huawei</UserName>
+    <Pwd>Huawei@123</Pwd>
+    <X>100</X>
+    <Y>100</Y>
+    <isNew>false</isNew>
+    <Values>
+      <KV>
+        <Key>输入带宽</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>输出带宽</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>在线用户</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL2</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL3</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL4</Key>
+        <Value />
+      </KV>
+    </Values>
+  </Site>
+  <Site>
+    <Id>10</Id>
+    <Name>生产楼MSE 二道</Name>
+    <Ip>222.168.94.36</Ip>
+    <UserName>huawei</UserName>
+    <Pwd>Huawei@123</Pwd>
+    <X>100</X>
+    <Y>100</Y>
+    <isNew>false</isNew>
+    <Values>
+      <KV>
+        <Key>输入带宽</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>输出带宽</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>在线用户</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL2</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL3</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL4</Key>
+        <Value />
+      </KV>
+    </Values>
+  </Site>
+  <Site>
+    <Id>11</Id>
+    <Name>枢纽ME60-1 净月/经开</Name>
+    <Ip>222.168.94.36</Ip>
+    <UserName>huawei</UserName>
+    <Pwd>Huawei@123</Pwd>
+    <X>100</X>
+    <Y>100</Y>
+    <isNew>false</isNew>
+    <Values>
+      <KV>
+        <Key>输入带宽</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>输出带宽</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>在线用户</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL2</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL3</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL4</Key>
+        <Value />
+      </KV>
+    </Values>
+  </Site>
+  <Site>
+    <Id>12</Id>
+    <Name>枢纽ME60-2 县域</Name>
+    <Ip>222.168.94.36</Ip>
+    <UserName>huawei</UserName>
+    <Pwd>Huawei@123</Pwd>
+    <X>100</X>
+    <Y>100</Y>
+    <isNew>false</isNew>
+    <Values>
+      <KV>
+        <Key>输入带宽</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>输出带宽</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>在线用户</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL2</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL3</Key>
+        <Value />
+      </KV>
+      <KV>
+        <Key>访问用户SL4</Key>
+        <Value />
+      </KV>
+    </Values>
+  </Site>
+</ArrayOfSite>

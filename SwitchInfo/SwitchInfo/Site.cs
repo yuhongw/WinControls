@@ -23,6 +23,8 @@ namespace SwitchInfo
         public int X { get; set; }              //显示位置
         public int Y { get; set; }
 
+        public bool isNew { get; set; } = false;
+
         public List<KV> Values { get; set; }
     }
 
@@ -187,6 +189,8 @@ namespace SwitchInfo
             site.Pwd = "Huawei@123";
             return site;
         }
+
+       
 
         public Site GetSiteTemplate()
         {

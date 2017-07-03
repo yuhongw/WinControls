@@ -64,7 +64,7 @@
     <Content Include="Index.aspx" />
     <Content Include="Data\sites.xml" />
     <Content Include="Script\jquery-1.7.1.min.js" />
-    <Content Include="UI.png" />
+    <Content Include="UI.jpg" />
     <Content Include="_Data.aspx" />
   </ItemGroup>
   <ItemGroup>

@@ -128,6 +128,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Sites.txt" />
     <Content Include="Tools\1\out_1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -167,6 +168,19 @@
     <Content Include="Tools\sites.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="work\1\out_1.txt" />
+    <Content Include="work\1\out_2.txt" />
+    <Content Include="work\1\out_3_sl2.txt" />
+    <Content Include="work\1\out_3_sl3.txt" />
+    <Content Include="work\1\out_3_sl4.txt" />
+    <Content Include="work\1\script_1_bandwith.txt" />
+    <Content Include="work\1\script_2_onlineusers.txt" />
+    <Content Include="work\1\script_3_accessuser_sl2.txt" />
+    <Content Include="work\1\script_3_accessuser_sl3.txt" />
+    <Content Include="work\1\script_3_accessuser_sl4.txt" />
+    <Content Include="work\1\TST10.exe" />
+    <Content Include="work\1\TST10.txt" />
+    <Content Include="work\sites.xml" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

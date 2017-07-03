@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gv = new System.Windows.Forms.DataGridView();
-            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -43,43 +41,36 @@
             this.txtInterval = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPwd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // gv
             // 
+            this.gv.AllowUserToAddRows = false;
             this.gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnID,
-            this.ColumnName});
+            this.ColumnName,
+            this.colIp,
+            this.colUser,
+            this.colPwd});
             this.gv.Location = new System.Drawing.Point(25, 112);
             this.gv.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.gv.Name = "gv";
-            this.gv.ReadOnly = true;
             this.gv.RowTemplate.Height = 23;
-            this.gv.Size = new System.Drawing.Size(477, 269);
+            this.gv.Size = new System.Drawing.Size(575, 269);
             this.gv.TabIndex = 0;
-            // 
-            // ColumnID
-            // 
-            this.ColumnID.DataPropertyName = "Id";
-            this.ColumnID.HeaderText = "ID";
-            this.ColumnID.Name = "ColumnID";
-            this.ColumnID.ReadOnly = true;
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.DataPropertyName = "Name";
-            this.ColumnName.HeaderText = "名称";
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.ReadOnly = true;
-            this.ColumnName.Width = 300;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(522, 112);
+            this.button1.Location = new System.Drawing.Point(631, 137);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 104);
@@ -100,18 +91,18 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.Location = new System.Drawing.Point(633, 223);
+            this.button4.Location = new System.Drawing.Point(742, 248);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(104, 104);
             this.button4.TabIndex = 5;
-            this.button4.Text = "退出(&X)";
+            this.button4.Text = "&X 退出";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnDelete.Location = new System.Drawing.Point(633, 112);
+            this.btnDelete.Location = new System.Drawing.Point(742, 137);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(104, 104);
@@ -140,14 +131,13 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(522, 223);
+            this.button2.Location = new System.Drawing.Point(631, 248);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 104);
             this.button2.TabIndex = 8;
-            this.button2.Text = "保存(&S)";
+            this.button2.Text = "&S 保存";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtInterval
@@ -175,6 +165,39 @@
             this.label4.Size = new System.Drawing.Size(23, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "秒";
+            // 
+            // ColumnID
+            // 
+            this.ColumnID.DataPropertyName = "Id";
+            this.ColumnID.HeaderText = "ID";
+            this.ColumnID.Name = "ColumnID";
+            this.ColumnID.ReadOnly = true;
+            this.ColumnID.Width = 50;
+            // 
+            // ColumnName
+            // 
+            this.ColumnName.DataPropertyName = "Name";
+            this.ColumnName.HeaderText = "名称";
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.Width = 150;
+            // 
+            // colIp
+            // 
+            this.colIp.DataPropertyName = "Ip";
+            this.colIp.HeaderText = "IP";
+            this.colIp.Name = "colIp";
+            // 
+            // colUser
+            // 
+            this.colUser.DataPropertyName = "UserName";
+            this.colUser.HeaderText = "用户名";
+            this.colUser.Name = "colUser";
+            // 
+            // colPwd
+            // 
+            this.colPwd.DataPropertyName = "Pwd";
+            this.colPwd.HeaderText = "密码";
+            this.colPwd.Name = "colPwd";
             // 
             // frmSetting
             // 
@@ -208,8 +231,6 @@
 
         private System.Windows.Forms.DataGridView gv;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button4;
@@ -220,6 +241,11 @@
         private System.Windows.Forms.TextBox txtInterval;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPwd;
     }
 }
 
