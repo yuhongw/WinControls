@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\published\web</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/NLog.dll">
+      <publishTime>06/17/2017 11:41:30</publishTime>
+    </File>
+    <File Include="bin/SwitchInfo.dll">
+      <publishTime>06/28/2017 20:47:53</publishTime>
+    </File>
+    <File Include="bin/Web.dll">
+      <publishTime>06/28/2017 20:47:54</publishTime>
+    </File>
+    <File Include="Data/sites.xml">
+      <publishTime>06/27/2017 19:21:31</publishTime>
+    </File>
+    <File Include="Index.aspx">
+      <publishTime>06/28/2017 20:44:47</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>06/24/2017 12:59:44</publishTime>
+    </File>
+    <File Include="Script/jquery-1.7.1.min.js">
+      <publishTime>06/27/2017 21:07:32</publishTime>
+    </File>
+    <File Include="UI.png">
+      <publishTime>06/28/2017 20:45:40</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/28/2017 20:47:54</publishTime>
+    </File>
+    <File Include="_Data.aspx">
+      <publishTime>06/28/2017 20:33:38</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

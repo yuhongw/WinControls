@@ -3,7 +3,10 @@
   <Profiles />
   <Settings>
     <Setting Name="DataPath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">f:\published\switchInfo</Value>
+      <Value Profile="(Default)">E:\tmp\switchInfo</Value>
+    </Setting>
+    <Setting Name="IntervalClient" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">20</Value>
     </Setting>
   </Settings>
 </SettingsFile>

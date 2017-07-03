@@ -1,0 +1,52 @@
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:huawei
+
+Username:huawei
+Password:Huawei@123
+
+Warning: Please change the original password. A password must be at least 8 characters and consist of upper-case letters, lower-case letters, digits, and special characters.
+The password needs to be changed. Change now? [Y/N]:N
+N
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2017-06-24 21:34:32+08:00.
+Info: Latest accessed  IP: 36.102.227.235  Time: 2017-06-24 21:34:31+08:00  Failed: 0
+
+<xiaoyuan-ME60.MAN>display access-user slot 2
+display access-user slot 2
+  ------------------------------------------------------------------------------
+  UserID  Username                Interface      IP address       MAC
+          Vlan          IPv6 address             Access type
+  ------------------------------------------------------------------------------
+  4       xiaoyuan-ME60.MAN-0...  GE2/0/0.3102   10.220.63.3      4497-5ae3-a779
+          3102/399      -                        IPOE           
+  44      xiaoyuan-ME60.MAN-0...  GE2/0/0.3107   10.50.0.212      206a-8a6a-0017
+          3107/1076     -                        IPOE           
+  45      xiaoyuan-ME60.MAN-0...  GE2/0/0.3101   10.250.242.204   2469-6871-ccbb
+          3101/835      -                        IPOE           
+  114     xiaoyuan-ME60.MAN-0...  GE2/0/0.3100   10.250.40.165    7486-7a48-6802
+          3100/2516     -                        IPOE           
+  132     xiaoyuan-ME60.MAN-0...  GE2/0/0.3108   10.50.8.167      80fa-5b16-061c
+          3108/1060     -                        IPOE           
+  182     xiaoyuan-ME60.MAN-0...  GE2/0/0.3100   10.250.75.125    382c-4a54-d5b6
+          3100/1360     -                        IPOE           
+  250     xiaoyuan-ME60.MAN-0...  GE2/0/0.3100   10.250.10.28     20a2-e45c-79a3
+          3100/1870     -                        IPOE           
+  335     xiaoyuan-ME60.MAN-0...  GE2/0/0.3501   10.250.43.4      5cf7-c3ef-bc8d
+          3501/-        -                        IPOE           
+  386     xiaoyuan-ME60.MAN-0...  GE2/0/0.3100   10.250.21.196    2089-84e5-c6bd
+          3100/1731     -                        IPOE           
+  400     xiaoyuan-ME60.MAN-0...  GE2/0/0.3501   10.250.42.207    3cb6-b756-4380
+          3501/-        -                        IPOE           
+  ---- More ----q[42D                                          [42D
+  ------------------------------------------------------------------------------
+  Normal users                       : 7767
+  RUI Local users                    : 0
+  RUI Remote users                   : 0
+  Total users                        : 7767
+<xiaoyuan-ME60.MAN>q
