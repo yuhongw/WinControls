@@ -62,10 +62,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Index.aspx" />
-    <Content Include="Data\sites.xml" />
+    <Content Include="Data\sites.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Script\jquery-1.7.1.min.js" />
     <Content Include="UI.jpg" />
     <Content Include="_Data.aspx" />
+    <Content Include="_GetInfo.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Index.aspx.cs">
@@ -88,6 +91,13 @@
     <Compile Include="_Data.aspx.designer.cs">
       <DependentUpon>_Data.aspx</DependentUpon>
     </Compile>
+    <Compile Include="_GetInfo.aspx.cs">
+      <DependentUpon>_GetInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_GetInfo.aspx.designer.cs">
+      <DependentUpon>_GetInfo.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -97,7 +107,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

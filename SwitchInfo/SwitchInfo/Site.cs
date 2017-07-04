@@ -79,7 +79,27 @@ namespace SwitchInfo
         private List<string> err;
         public List<string> Err { get { return this.err; } }
 
-        
+        /// <summary>
+        /// 生成所有站点,copy 文件，更改参数
+        /// force:强制重新生成，即使原来已存在，也要删除后重建
+        /// </summary>
+        public void GenerateSites(bool force=false)
+        {
+            if (force)
+            {
+                var dirs = Directory.GetDirectories(RootPath);
+                foreach (string dir in dirs)
+                {
+                    Directory.Delete(dir, true);
+                }
+            }
+
+            var sites = ReadData();
+            foreach (Site site in sites)
+            {
+                CopyFilesAndReplaceAddr(site);
+            }
+        }
 
         private string RootPath;
         private string OriginToolPath;
@@ -88,7 +108,13 @@ namespace SwitchInfo
             RootPath = path;
             OriginToolPath = originToolPath;
         }
-       
+
+        //删除站点工具
+        public void DeleteSiteTool(Site site)
+        {
+            Directory.Delete(Path.Combine(RootPath, site.Id.ToString()), true);
+        }
+
         public List<Site> ReadData()
         {
             string fn = $"{RootPath}/sites.xml";
@@ -123,25 +149,33 @@ namespace SwitchInfo
             CopyFilesAndReplaceAddr( Path.Combine(RootPath,newId.ToString()),site);
         }
 
+        private void CopyFilesAndReplaceAddr(Site site)
+        {
+            CopyFilesAndReplaceAddr(Path.Combine(RootPath, site.Id.ToString()),site);
+        }
+
         private void CopyFilesAndReplaceAddr(string newPath, Site site)
         {
-            var files = Directory.GetFiles(OriginToolPath);
-            foreach (string f in files)
+            if (!Directory.Exists(newPath))
             {
-                string fn = Path.GetFileName(f);
-                string destFn = Path.Combine(newPath, fn);
-                if (!Directory.Exists(Path.GetDirectoryName(destFn))) Directory.CreateDirectory(Path.GetDirectoryName(destFn));
-                if (fn.StartsWith("script_"))
+                var files = Directory.GetFiles(OriginToolPath);
+                foreach (string f in files)
                 {
-                    string txt = File.ReadAllText(f)
-                        .Replace("<IP>", site.Ip)
-                        .Replace("<username>",site.UserName)
-                        .Replace("<pwd>",site.Pwd);
-                    File.WriteAllText(destFn, txt);
-                }
-                else
-                {
-                    File.Copy(f, destFn);
+                    string fn = Path.GetFileName(f);
+                    string destFn = Path.Combine(newPath, fn);
+                    if (!Directory.Exists(Path.GetDirectoryName(destFn))) Directory.CreateDirectory(Path.GetDirectoryName(destFn));
+                    if (fn.StartsWith("script_"))
+                    {
+                        string txt = File.ReadAllText(f)
+                            .Replace("<IP>", site.Ip)
+                            .Replace("<username>", site.UserName)
+                            .Replace("<pwd>", site.Pwd);
+                        File.WriteAllText(destFn, txt);
+                    }
+                    else
+                    {
+                        File.Copy(f, destFn);
+                    }
                 }
             }
         }
@@ -171,7 +205,7 @@ namespace SwitchInfo
             }
         }
 
-        public List<Site> GetDataTemplate()
+        public List<Site> GetDataListTemplate()
         {
             List<Site> site = new List<Site>()
             {
@@ -240,6 +274,12 @@ namespace SwitchInfo
             List<Site> list = ReadData();
             list.Remove(list.First(x=>x.Id == site.Id));
             SaveData(list);
+        }
+
+        public Site GetSiteById(int siteId)
+        {
+            var list = ReadData();
+            return list.FirstOrDefault(x => x.Id == siteId);
         }
     }
 }

@@ -14,9 +14,13 @@ namespace Web
         protected void Page_Load(object sender, EventArgs e)
         {
             SiteSvc siteSvc = new SiteSvc(Properties.Settings.Default.DataPath, "");
-            var list = siteSvc.ReadData();
-            if (list.Count>0)
-                this.site = siteSvc.ReadData().First();
+            string siteIdstr = Request.QueryString["id"];
+            int siteId = 0;
+            if (int.TryParse(siteIdstr, out siteId))
+            {
+                this.site = siteSvc.GetSiteById(siteId);
+            }
+            
         }
     }
 }

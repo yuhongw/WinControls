@@ -59,6 +59,14 @@
             left: 200px;
             width:1250px;
         }
+        #divInfo {
+            position:absolute;
+            display:block;
+            top:130px;
+            left:300px;
+            color:white;
+        }
+        
     </style>
 </head>
 <body>
@@ -66,6 +74,7 @@
     <div>
         <img src="UI.jpg" style="width: 1600px; height: 1000px;" />
     </div>
+    <div id="divInfo" >- 最后更新时间:<span id="time"></span> - 更新时间间隔:<span><%=IntervalUpdate%>分钟 -</span></div>
     <div class="siteCont">
         <%foreach (Site site in this.Data)
             { %>
@@ -83,6 +92,7 @@
             function (index, elem) {
                 $(elem).load("_Data.aspx?id=" + $(elem).attr("siteId"));
             });
+        $("#time").load("_GetInfo.aspx?id=lastUpdateTime");
     }
     loadData();
     setInterval(function () {

@@ -12,11 +12,13 @@ namespace Web
     {
         protected List<Site> Data;
         protected int Interval;
+        protected int IntervalUpdate;       //从交换机更新数据的间隔
         protected void Page_Load(object sender, EventArgs e)
         {
             SiteSvc siteSvc = new SiteSvc(Properties.Settings.Default.DataPath,"");
             this.Data = siteSvc.ReadData();
             Interval = Properties.Settings.Default.IntervalClient;
+            IntervalUpdate = Properties.Settings.Default.IntervalUpdate;
         }
     }
 }

@@ -3,10 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="DataPath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">E:\tmp\switchInfo</Value>
+      <Value Profile="(Default)">F:\Projs\cn\wincontrols\SwitchInfo\SwitchSetting\bin\Debug\work</Value>
     </Setting>
     <Setting Name="IntervalClient" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">20</Value>
+      <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="IntervalUpdate" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">10</Value>
     </Setting>
   </Settings>
 </SettingsFile>

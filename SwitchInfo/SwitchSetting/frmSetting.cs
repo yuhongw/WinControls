@@ -22,7 +22,7 @@ namespace SwitchSetting
             txtRootPath.Text = rootPath;
             txtInterval.Text = Properties.Settings.Default.interval.ToString();
             if (!Directory.Exists(rootPath)) Directory.CreateDirectory(rootPath);
-            svc = new SiteSvc(rootPath,Helpers.GetOriginToolPath());
+            svc = new SiteSvc(rootPath, Helpers.GetOriginToolPath());
             data = svc.ReadData();
             BindData();
         }
@@ -39,7 +39,7 @@ namespace SwitchSetting
             //frmNew frm = frmNew.GetForm(svc);
             //frm.ShowDialog();
             var site = svc.GetDataSample();
-            site.Id = data.Count==0?1:data.Max(x => x.Id) + 1;
+            site.Id = data.Count == 0 ? 1 : data.Max(x => x.Id) + 1;
             data.Add(site);
             //svc.AddNewSite(site);
             BindData();
@@ -66,6 +66,8 @@ namespace SwitchSetting
         private void button2_Click(object sender, EventArgs e)
         {
             svc.SaveData(data);
+            svc.GenerateSites();
+            MessageBox.Show("全部保存成功。");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -74,13 +76,27 @@ namespace SwitchSetting
             if (int.TryParse(txtInterval.Text, out val) && val > 0)
             {
                 Properties.Settings.Default.interval = val;
+                Properties.Settings.Default.Save();
             }
             else
             {
                 txtInterval.Text = Properties.Settings.Default.interval.ToString();
                 Helpers.ShowError("更新时间间隔设置错误。");
-                
+
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (gv.CurrentRow.DataBoundItem != null)
+            {
+                Site site = gv.CurrentRow.DataBoundItem as Site;
+                if (MessageBox.Show($"确认要删除{site.Id} {site.Name}的站点工具吗?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    svc.DeleteSiteTool(site);
+                }
+            }
+
         }
     }
 }
