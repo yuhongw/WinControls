@@ -25,27 +25,21 @@
                 border: solid #fff;
                 border-width: 1px 1px 1px 1px;
                 padding: 2px;
+                line-height:40px;
+                min-width:150px;
+                text-align:center;
+                font-family: 微软雅黑;
+                font-size: 12pt;
+                color: white;
             }
 
-        .device {
-            font-family: 微软雅黑;
-            font-size: 12pt;
-            color: white;
-            display: inline-block;
+        thead td {
+            background-color:#154;
+            opacity:0.8;
         }
 
-            .device td.name {
-                min-width: 100px;
-                line-height: 21px;
-            }
-
-            .device td.value {
-                min-width: 50px;
-                line-height: 21px;
-            }
-
-        .right {
-            text-align: right;
+        td.rowHead {
+            min-width:200px;
         }
 
         .device .siteName {
@@ -53,11 +47,12 @@
             text-align: center;
         }
 
-        .siteCont {
+        #siteCont {
             position: absolute;
             top: 250px;
-            left: 200px;
+            left: 250px;
             width:1250px;
+            color:white;
         }
         #divInfo {
             position:absolute;
@@ -75,12 +70,7 @@
         <img src="UI.jpg" style="width: 1600px; height: 1000px;" />
     </div>
     <div id="divInfo" >- 最后更新时间:<span id="time"></span> - 更新时间间隔:<span><%=IntervalUpdate%>分钟 -</span></div>
-    <div class="siteCont">
-        <%foreach (Site site in this.Data)
-            { %>
-        <div class="device" siteid="<%=site.Id%>">
-        </div>
-        <%} %>
+    <div id="siteCont">
     </div>
 </body>
 </html>
@@ -88,10 +78,7 @@
 <script>
 
     function loadData() {
-        $("div.device").each(
-            function (index, elem) {
-                $(elem).load("_Data.aspx?id=" + $(elem).attr("siteId"));
-            });
+        $("#siteCont").load("_Data.aspx");
         $("#time").load("_GetInfo.aspx?id=lastUpdateTime");
     }
     loadData();
