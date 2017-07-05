@@ -12,6 +12,7 @@
     <style>
         html, body {
             margin: 0;
+            background-color:#1071b5;
         }
 
         table {
@@ -50,7 +51,7 @@
         #siteCont {
             position: absolute;
             top: 250px;
-            left: 250px;
+            left: 225px;
             width:1250px;
             color:white;
         }
@@ -69,7 +70,7 @@
     <div>
         <img src="UI.jpg" style="width: 1600px; height: 1000px;" />
     </div>
-    <div id="divInfo" >- 最后更新时间:<span id="time"></span> - 更新时间间隔:<span><%=IntervalUpdate%>分钟 -</span></div>
+    <div id="divInfo" >-在线用户数合计:<span id="sum"></span> - 最后更新时间:<span id="time"></span> - 更新时间间隔:<span><%=IntervalUpdate%>分钟 -</span></div>
     <div id="siteCont">
     </div>
 </body>
@@ -80,6 +81,7 @@
     function loadData() {
         $("#siteCont").load("_Data.aspx");
         $("#time").load("_GetInfo.aspx?id=lastUpdateTime");
+        $("#sum").load("_GetInfo.aspx?id=userCountSum");
     }
     loadData();
     setInterval(function () {

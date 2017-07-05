@@ -26,6 +26,19 @@ namespace Web
                     Response.Write(finfo.LastWriteTime);
                 }
             }
+            if (cmd == "userCountSum")
+            {
+                int i = 0;
+                var data = siteSvc.ReadData();
+                var value = data.SelectMany(x => x.Values)
+                    .Where(x => 
+                        x.Key == "在线用户" && 
+                        int.TryParse(x.Value,out i))
+                        .Select(x =>x.Value)
+                        .Sum(x=>int.Parse(x));
+                
+                Response.Write(value);
+            }
             Response.End();
         }
     }
