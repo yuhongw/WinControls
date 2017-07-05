@@ -6,38 +6,53 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>E:\published\web</_PublishTargetUrl>
+    <_PublishTargetUrl>F:\published\web</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/NLog.dll">
       <publishTime>06/17/2017 11:41:30</publishTime>
     </File>
     <File Include="bin/SwitchInfo.dll">
-      <publishTime>06/28/2017 20:47:53</publishTime>
+      <publishTime>07/04/2017 13:23:34</publishTime>
+    </File>
+    <File Include="bin/SwitchInfo.dll.config">
+      <publishTime>06/27/2017 08:13:48</publishTime>
+    </File>
+    <File Include="bin/SwitchInfo.pdb">
+      <publishTime>07/04/2017 13:23:34</publishTime>
     </File>
     <File Include="bin/Web.dll">
-      <publishTime>06/28/2017 20:47:54</publishTime>
+      <publishTime>07/05/2017 09:58:35</publishTime>
+    </File>
+    <File Include="bin/Web.pdb">
+      <publishTime>07/05/2017 09:58:35</publishTime>
     </File>
     <File Include="Data/sites.xml">
-      <publishTime>06/27/2017 19:21:31</publishTime>
+      <publishTime>06/27/2017 08:29:10</publishTime>
     </File>
     <File Include="Index.aspx">
-      <publishTime>06/28/2017 20:44:47</publishTime>
+      <publishTime>07/05/2017 09:56:33</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>06/24/2017 12:59:44</publishTime>
+      <publishTime>06/27/2017 08:13:48</publishTime>
     </File>
     <File Include="Script/jquery-1.7.1.min.js">
-      <publishTime>06/27/2017 21:07:32</publishTime>
+      <publishTime>06/28/2017 08:37:02</publishTime>
+    </File>
+    <File Include="UI.jpg">
+      <publishTime>07/04/2017 08:26:09</publishTime>
     </File>
     <File Include="UI.png">
       <publishTime>06/28/2017 20:45:40</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/28/2017 20:47:54</publishTime>
+      <publishTime>07/05/2017 09:59:02</publishTime>
     </File>
     <File Include="_Data.aspx">
-      <publishTime>06/28/2017 20:33:38</publishTime>
+      <publishTime>07/05/2017 09:56:33</publishTime>
+    </File>
+    <File Include="_GetInfo.aspx">
+      <publishTime>07/04/2017 10:13:30</publishTime>
     </File>
   </ItemGroup>
 </Project>
