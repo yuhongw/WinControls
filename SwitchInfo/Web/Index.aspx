@@ -78,10 +78,14 @@
 
 <script>
 
+    $.ajaxSetup({
+        cache: false //close AJAX cache
+    });
+
     function loadData() {
         $("#siteCont").load("_Data.aspx");
-        $("#time").load("_GetInfo.aspx?id=lastUpdateTime");
-        $("#sum").load("_GetInfo.aspx?id=userCountSum");
+        $("#time").load("_GetInfo.aspx?id=lastUpdateTime&&"+Date.now());
+        $("#sum").load("_GetInfo.aspx?id=userCountSum&&"+Date.now());
     }
     loadData();
     setInterval(function () {

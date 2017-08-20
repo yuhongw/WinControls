@@ -21,3 +21,5 @@ bin
 /SwitchInfo/Web/obj
 /SwitchInfo/.vs
 /SwitchInfo/SwitchSetting/work/1
+/SwitchInfo/Web/Properties/PublishProfiles
+/SwitchInfo/SwitchSetting
